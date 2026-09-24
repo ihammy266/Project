@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Random Quote Generator</title>
+    <style>
+        body {
+            background-color: peachpuff;
+        }
+
+        .container {
+            width: 95%;
+            height: 100vh;
+            display: flex;
+            text-align: center;
+        }
+
+        .quotes {
+            width: 800px;
+            height: 450px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 30px;
+            color: gray;
+            background-color: rgb(227, 223, 223);
+            border: 10px solid rgb(117, 88, 88);
+        }
+
+        #quote {
+            font-size: 2rem;
+        }
+
+        #author {
+            font-size: 2rem;
+        }
+
+        .generate-button {
+            border: 1px solid black;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        @media(max-width:480px) {
+            #quote {
+                font-size: 1.5rem;
+            }
+
+            #author {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="quotes">
+            <p id="quote"></p>
+            <h3 id="author">Codefoxx</h3>
+        </div>
+    </div>
+    <div class=" generate-button">
+
+        <button onclick="generate();" type="button" class="btn btn-secondary">Generate Quote</button>
+    </div>
+    <script>
+        function generate() {
+            const quotes = {
+                "_Osamu Dazai, Schoolgirl": "“To break free from this vexatious and awful never-ending cycle, this flood of outrageous thoughts, and to long for nothing more than simply to sleep--how clean, how pure, the mere thought of it is exhilarating.”",
+                "― Erik Pevernagie": '“When some claim demarcation and “regulation”, others fancy “deregulation”, preferring foxes guarding the henhouse or chicken yards with free chickens and free foxes. Friend or foe, hen or fox, anyone can have a go. (“This far”)”',
+                "― Alysha Speer": "  “You never really know what's coming. A small wave, or maybe a big one. All you can really do is hope that when it comes, you can surf over it, instead of drown in its monstrosity.”",
+                "― Madeline Miller, The Song of Achilles": ' “Bury us, and mark our names above. Let us be free.”',
+                "― Aaron Lauritsen": ' “There is strange comfort in knowing that no matter what happens today, the Sun will rise again tomorrow.”',
+                " ― Jenny Valentine": '“Even when you’d lost everything you thought there was to lose, somebody came along and gave you something for free.”',
+                " _Walt Whitman": '"Keep your face always toward the sunshine, and shadows will fall behind you."',
+                " _ George Addair": '"Everything you have ever wanted is on the other side of fear."',
+                " _ Arthur Ashe": '"Start where you are. Use what you have. Do what you can."'
+
+            }
+
+            const authors = Object.keys(quotes);
+            const author = authors[Math.floor(Math.random() * authors.length)];
+              const quote = quotes[author];
+            
+              document.querySelector('#quote').innerHTML = quote;
+               document.querySelector('#author').innerHTML = author;
+        }
+      
+    </script>
+</body>
+
+</html>

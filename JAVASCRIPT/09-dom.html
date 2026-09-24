@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM project</title>
+  
+</head>
+<style>
+  body {
+    line-height: 50px;
+  }
+
+  p {
+    font-size: large;
+    line-height: normal;
+  }
+
+  button {
+    font-size: large;
+  }
+
+  a {
+    font-size: large;
+  }
+
+  input {
+    font-size: large;
+  }
+</style>
+
+<body>
+  <p>YOUTUBE SUBSCRIBE BUTTON</p>
+  <button id = js-subscribe-button onclick="subscribe()"
+  >Subscribe</button>
+
+  <p>Rock Paper Scissors</p>
+
+
+  <a href="9a.html">Click here</a>
+  <p>Amazon Shippiing Calculator
+  </p>
+  <p>Order under $40 = +$10 Shippiing</p>
+  <p>Order over $40 = FREE Shippinng</p>
+  <div>
+     <input class="search-bar" type="text" id="orderCost" placeholder="Cost of Order">
+    <button onclick="calculateTotal();
+   
+    ">Calculate</button>
+     <p id="result"></p>
+  </div>
+
+
+  <a href="9b.html">CSS version of these projects</a>
+  <script>
+ 
+    function subscribe() {
+       document.getElementById('js-subscribe-button').textContent ='Subscribed';
+    }
+    
+   function calculateTotal() {
+    let orderCost = Number(document.getElementById("orderCost").value);
+    let totalCost;
+
+    if (orderCost >= 40) {
+        totalCost = orderCost;
+    } else {
+        totalCost = orderCost + 10;
+    }
+
+    document.getElementById("result").textContent =
+        `Total Cost: $${totalCost}`;
+}
+  </script>
+</body>
+
+</html>

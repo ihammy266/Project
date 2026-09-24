@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Blog Page</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background:#f4f4f4;
+            line-height:1.6;
+        }
+
+        header{
+            background:#333;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        nav{
+            margin-top:10px;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:0 15px;
+        }
+
+        .container{
+            display:flex;
+            gap:20px;
+            padding:20px;
+        }
+
+        main{
+            flex:3;
+            background:white;
+            padding:20px;
+            border-radius:8px;
+        }
+
+        aside{
+            flex:1;
+            background:white;
+            padding:20px;
+            border-radius:8px;
+        }
+
+        section{
+            margin-bottom:30px;
+        }
+
+        article{
+            margin-bottom:25px;
+            padding-bottom:15px;
+            border-bottom:1px solid #ddd;
+        }
+
+        article h2{
+            color:#333;
+            margin-bottom:8px;
+        }
+
+        article time{
+            color:gray;
+            font-size:14px;
+        }
+
+        aside ul{
+            list-style:square;
+            margin-left:20px;
+        }
+
+        aside a{
+            text-decoration:none;
+            color:blue;
+        }
+
+        footer{
+            background:#333;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:20px;
+        }
+
+        address{
+            margin-top:10px;
+            font-style:normal;
+        }
+
+        address a{
+            color:lightblue;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Tech Blog</h1>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- Welcome Section -->
+            <section>
+                <h2>Welcome</h2>
+                <p>
+                    Welcome to My Tech Blog. Here you'll find articles about
+                    HTML, CSS, JavaScript and web development.
+                </p>
+            </section>
+
+            <!-- First Article -->
+            <article>
+                <h2>Getting Started with HTML5</h2>
+
+                <time datetime="2026-08-28">
+                    August 28, 2026
+                </time>
+
+                <p>
+                    HTML5 introduces semantic elements that make webpages
+                    easier to read, understand, and maintain.
+                </p>
+            </article>
+
+            <!-- Second Article -->
+            <article>
+                <h2>Why Semantic Tags Matter</h2>
+
+                <time datetime="2026-08-27">
+                    August 27, 2026
+                </time>
+
+                <p>
+                    Semantic tags improve accessibility, SEO, and make your
+                    code more meaningful for both developers and browsers.
+                </p>
+            </article>
+
+        </main>
+
+        <!-- Sidebar -->
+        <aside>
+
+            <h2>Related Links</h2>
+
+            <ul>
+                <li><a href="#">Learn HTML</a></li>
+                <li><a href="#">CSS Tutorials</a></li>
+                <li><a href="#">JavaScript Basics</a></li>
+            </ul>
+
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>&copy; 2026 My Tech Blog. All rights reserved.</p>
+
+        <address>
+            Contact:
+            <a href="mailto:info@mytechblog.com">
+                info@mytechblog.com
+            </a>
+        </address>
+
+    </footer>
+
+</body>
+</html>

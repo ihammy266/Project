@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=0, initial-scale=1.0">
+    <title>Cart Quantity</title>
+
+    <style>
+        button {
+            padding: 8px 5px 8px 5px;
+            font-size: medium;
+        }
+
+        p {
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Cart Quantity</p>
+    <button onclick="
+    
+    console.log(`Cart Quantity :${cartQuantity}`);
+    ">Show Quantity</button>
+
+    <button onclick="
+    cartQuantity++;
+    console.log(`Cart Quantity :${cartQuantity}`);
+
+    ">Add to Cart</button>
+
+    <button onclick="
+    cartQuantity += 2;
+    console.log(`Cart Quantity :${cartQuantity}`);
+     ">+ 2</button>
+
+    <button onclick="
+    cartQuantity = cartQuantity + 3;
+    console.log(`Cart Quantity :${cartQuantity}`);
+    ">+ 3
+    </button>
+
+    <button onclick="
+    cartQuantity += 4;
+    console.log(`Cart Quantity :${cartQuantity}`);
+    ">+4</button>
+
+    <button onclick="
+    cartQuantity += 5;
+    console.log(`Cart Quantity :${cartQuantity}`);
+    ">+5</button>
+
+    <button onclick="
+    cartQuantity -= 1
+   console.log(`Cart Quantity :${cartQuantity}`);
+
+     if (cartQuantity < 0) {
+        alert('Not enough  quantity in the Cart');
+        cartQuantity = '';
+     }
+       
+        
+    ">Remove from Cart</button>
+
+    <button onclick="
+    cartQuantity =  0;
+    console.log(`Cart was reset. \n Cart Quantity :${cartQuantity}`);
+    ">Reset Cart</button>
+
+
+    <Script>
+        let cartQuantity = 0;
+
+      
+
+        
+
+    </Script>
+</body>
+
+</html>

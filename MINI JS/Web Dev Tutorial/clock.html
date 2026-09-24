@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Poiret+One&family=Roboto:ital,wght@0,500;1,500&display=swap"
+        rel="stylesheet">
+    <title>Digital Clock</title>
+    <style>
+        .container {
+            width: 95%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .digitalClock {
+            width: 800px;
+            height: 250px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: 1px solid black;
+            font-size: x-large;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            background-color: #b78cf7;
+            font-family: "Poiret One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+
+        h1 {
+            margin-left: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="digitalClock">
+            <h1 class="day">Wednesday</h1>
+            <h1 class="hour">09</h1>
+            <h1 class="barcode-1">|</h1>
+            <h1 class="minute">30</h1>
+            <h1 class="barcode-2">|</h1>
+            <h1 class="ampm">AM</h1>
+        </div>
+    </div>
+
+    <Script>
+        /*
+        window.addEventListener('load', tellTime);
+        let hour = 9;
+        let minute = 30;
+        let second = 0
+        let dayIndex = 0;
+        function tellTime() {
+            const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+            const meridean = ['AM', 'PM'];
+            let result = "";
+
+            second++;
+            if (second === 60) {
+                second = 0;
+                minute += 1;
+            }
+            if (minute === 60) {
+                minute = 0;
+                hour += 1;
+            };
+
+            minute < 10 ? '0' + minute : minute;
+            if (hour === 24) {
+                dayIndex++;
+
+            };
+            if (dayIndex === days.length) {
+                dayIndex = 0;
+            }
+
+            if (hour < 12) {
+                result += meridean[0];
+            } else {
+                result += meridean[1];
+            };
+
+            hour < 10 ? '0' + hour : hour;
+
+            document.querySelector('.day').innerHTML = days[dayIndex];
+            document.querySelector('.hour').innerHTML = hour;
+            document.querySelector('.minute').innerHTML = minute;
+            document.querySelector('.ampm').innerHTML = result;
+
+        }
+        setInterval(tellTime, 1000);
+        */
+      
+        window.addEventListener('load',calculateTime);
+       function calculateTime() {
+        var date = new Date();
+        var dayNumber = date.getDay();
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        var days = [ 'Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+          var ampm = hour >= 12 ? 'PM' : 'AM'
+          hour = hour < 10 ? '0' + hour : hour;
+          minute =minute < 10 ? '0' + minute : minute;
+          
+            document.querySelector('.day').innerHTML = days[dayNumber];
+            document.querySelector('.hour').innerHTML = hour;
+            document.querySelector('.minute').innerHTML = minute;
+            document.querySelector('.ampm').innerHTML = ampm;
+       
+       }
+       setInterval(calculateTime,1000);
+      
+    </Script>
+</body>
+
+</html>
