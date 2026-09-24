@@ -118,7 +118,7 @@
           var ampm = hour >= 12 ? 'PM' : 'AM'
           hour = hour < 10 ? '0' + hour : hour;
           minute =minute < 10 ? '0' + minute : minute;
-          
+
             document.querySelector('.day').innerHTML = days[dayNumber];
             document.querySelector('.hour').innerHTML = hour;
             document.querySelector('.minute').innerHTML = minute;
@@ -126,6 +126,8 @@
        
        }
        setInterval(calculateTime,1000);
+
+       console.log(date);
       
     </Script>
 </body>
