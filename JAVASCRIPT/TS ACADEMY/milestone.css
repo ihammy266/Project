@@ -1,0 +1,223 @@
+ body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 40px;
+    
+ }
+
+
+img {
+  height : 90px;
+
+ 
+}
+iframe {
+    height: 240px;
+    width: 500px;
+  border-radius : 5px;
+  margin-bottom: 20px;
+}
+.solar-image {
+  height : 240px;
+  width: 500px;
+  margin-left : 0;
+   border-radius : 5px
+   
+}
+figure {
+  margin-left : 0;
+}
+figcaption {
+  margin-bottom : 14px;
+}
+.container {
+    width: 95%;
+    height: 470vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+nav {
+  margin: auto;
+  margin-top: 35px;
+  margin-bottom: 70px;
+}
+a {
+     margin-left: 25px;
+     color: rgb(17, 16, 16);
+     font-weight: bold;
+}
+
+h1,h2 {
+    font-weight: 600;
+}
+header,section {
+    border-bottom: 2px solid rgb(131, 127, 127);
+   
+}
+ header h1 {
+  
+   padding-top: 50px;
+   margin-top: auto;
+   width: 500px;
+ }
+
+ header p {
+    width: 500px;
+    color: gray;
+    line-height: 25px;
+ }
+ header {
+     border-top : 2px solid rgb(131, 127, 127);
+ }
+ section {
+    padding-top: 40px;
+ }
+ span {
+    font-weight: bold;
+ }
+ section p {
+    margin-bottom: 30px;
+    line-break: normal;
+ }
+    table,th,tr,td {
+        border: 4px solid rgb(44, 42, 42);
+        border-collapse: collapse;
+        padding : 20px 50px;
+        border-spacing: 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bolder;
+        font-size: large;
+      }
+      table {
+        width: 95%;
+        margin-bottom: 30px;
+      }
+      th {
+        padding: 5px 90px;
+      }
+    caption {
+        text-align: start;
+        margin-bottom: 10px;
+    }
+
+    form span {
+        color: #000;
+    }
+    form {
+        margin-bottom: 30px;
+    }
+    .input-types {
+       display: flex;
+       flex-direction: column;
+       column-gap: 30px;
+
+    }
+    input,select {
+        width: 38%;
+        height: 50px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        padding-left: 10px;
+        border: 1px solid #dcdcdc;;
+
+    }
+    textarea {
+        height: 100px;
+        width: 38%;
+        padding-left: 10px;
+    }
+    textarea ::placeholder {
+        font-size: 16px;
+    }
+    .char-count {
+        color: gray;
+        margin-top: 5px;
+    }
+    label {
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+    select option {
+        color: gray;
+
+    }
+
+
+    #check-box {
+         width: 25px;
+        text-align: center;
+    }
+
+
+   #radio-input label {
+    font-size: 16px;
+   }
+   #radio-input {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#radio-input label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#radio-input input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+}
+
+
+   #check-box-input label {
+    font-size: 16px;
+   }
+   #check-box-input {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#check-box-input label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#check-box-input input[type="checkbox"] {
+    width: 25px;
+    height: 18px;
+    margin: 0;
+}
+ #submit {
+    width: 20%;
+    height: 40px;
+    color: white;
+    background-color: rgb(181, 181,181);
+    font-size: 14px;
+    margin-bottom: 30px;
+ }
+ aside li {
+    line-height: 45px;
+    font-size: 14px;
+ }
+ aside ul {
+    margin-bottom: 30px;
+ }
+
+ aside {
+     border-bottom: 2px solid black;
+ }
+ footer div {
+    display: flex;
+    gap: 40px;
+
+ }
