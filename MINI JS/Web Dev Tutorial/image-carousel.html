@@ -1,19 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back_ios" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward_ios" />
     <title>Image Carousel</title>
+
+    <style>
+        body {
+            .material-symbols-outlined {
+                font-variation-settings:
+                    'FILL' 0,
+                    'wght' 400,
+                    'GRAD' 0,
+                    'opsz' 24
+            }
+
+        }
+
+
+        .car-container {
+            width: 95%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin: auto;
+            position: relative;
+            margin-bottom: 0;
+            
+        }
+
+
+        .image {
+            display: none;
+            margin-bottom: 0;
+            width: fit-content;
+            height: fit-content;
+
+        
+        }
+
+        img {
+          max-width : 1020px;
+            height : auto;
+        }
+
+
+        #prev,
+        #next {
+           color: rgb(50, 9, 212);
+            position: absolute;
+            text-align: center;
+            height: 20px;
+            width: 20px;
+            border-radius: 0 3px 3px 0;
+            transition: background-color 0.6s ease;
+            cursor: pointer;
+            user-select: none;
+            padding: 16px;
+            font: 1em sans-serif;
+            font-weight: bold;
+        }
+       
+
+        #prev {
+            top: 43%;
+            left: 10px;
+        }
+        #next {
+            top: 43%;
+            right: 10px;
+        }
+
+        #prev:hover, #next:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        }
+        .active {
+            background-color: rgb(84, 77, 77);
+        }
+        .dots {
+           
+            display: flex;
+            gap: 10px;
+            margin-top: 0;
+            
+        }
+
+        span {
+         background-color: rgb(215, 212, 212);
+        border-radius: 10px;
+            height: 20px;
+            width: 20px;
+            transition: background-color 0.6s ease;
+            
+        }
+
+
+         .fade {
+            animation: fade 1.5s;
+         }
+         @keyframes fade {
+            from {opacity: .4;}
+            to {opacity: 1;}
+         }
+
+         @media (min-width : 1024px){
+           .dots {
+            margin-bottom: 50px;
+           }
+          
+         }
+
+         @media (min-width : 768px) {
+          .car-container {
+            width: 800px;
+            height: 400px;
+          }
+          img {
+            width: 700px;
+            height: 450px;
+          }
+          .image {
+            margin-top: 20px;
+          }
+         }
+         @media (max-width : 480px) {
+
+         }
+    </style>
 </head>
+
 <body>
-    <div>
-        <div>
-            <img>
-            <img>
-            <img>
-            <img>
-            <img>
+    <div class="car-container">
+        <div class="image  fade"> <img src="car-2.jpg"></div>
+        <div class="image  fade"><img src="car-3.avif"></div>
+        <div class="image   fade"> <img src="car-4.jpg"></div>
+        <div class="image  fade"><img src="car-5.avif"></div>
+        <div class="image  fade"><img src="car-6.webp"></div>
+        <svg id="prev" onclick="showImage(-1);" xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+            <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" />
+        </svg>
+        <svg id="next" onclick="showImage(1);" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+            width="24px" fill="#FFFFFF">
+            <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
+        </svg>
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
     </div>
+
+
+
+    <script>
+        var index = 0;
+        console.log(showImage(index));
+        function showImage(i) {
+            index += i;
+            var images = document.querySelectorAll(".image");
+            var dots = document.querySelectorAll(".dot");
+            for (let i = 0; i < images.length; i++) {
+                images[i].style.display = "none";
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace("active", "");
+            }
+
+            if (index > images.length - 1) {
+                index = 0;
+            }
+            if (index < 0) {
+                index = images.length - 1;
+            }
+
+            images[index].style.display = "block";
+            dots[index].className += " active";
+        }
+    </script>
 </body>
+
 </html>
