@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #click {
+           background-color: rgb(229, 223, 223);
+           color: blue;
+           border: none;
+           padding: 10px;
+           display: block;
+           margin-top: 10px;
+
+        }
+        #toggle {
+            background-color: white;
+            padding: 4px 6px 4px 6px;
+            border: 0cap;
+
+        }
+
+        #toggle:hover {
+            border: 1px solid rgb(62, 53, 122);
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <button id="toggle"  onclick="toggleButton()">Light</button>
+    <button id="click">Click Me</button>
+
+    <script>
+    
+     function toggleButton () {
+      const button = document.querySelector("#toggle");
+      if (button.textContent === "Light") {
+        button.textContent = "Dark"
+     document.getElementsByTagName('body')[0].style.backgroundColor = "blue";
+     document.getElementById('click').style.backgroundColor = "rgb(229, 223, 223)";
+     document.getElementById('click').style.color = "white";
+     button.style.backgroundColor = "black"
+     button.style.color = "white"
+      } else {
+        button.textContent = "Light"
+          document.getElementsByTagName('body')[0].style.backgroundColor = "";
+     document.getElementById('click').style.backgroundColor = "";
+     document.getElementById('click').style.color = "";
+     button.style.backgroundColor = ""
+     button.style.color = ""
+      }
+     }
+    </script>
+</body>
+</html>

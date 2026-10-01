@@ -62,6 +62,8 @@ function updadteCartQuantity() {
   });
   document.querySelector('.js-cart-quantity').textContent = cartQuantity;
 }
+
+
 console.log(productsHTML);
 document.querySelector('.js-products-grid').innerHTML = productsHTML;
 let timerId = "";
@@ -70,13 +72,10 @@ document.querySelectorAll('.js-add-to-cart-button').
   forEach((button) => {
     button.addEventListener('click', () => {
       const { productId } = button.dataset;
-      const select = document.querySelector(`#select-value-${productId}`);
-      const addedQuantity = Number(select.value);
-
+   
+  
       addToCart(productId);
       updadteCartQuantity();
-
-
 
 
       const message = document.querySelector(`.js-message-${productId}`);
