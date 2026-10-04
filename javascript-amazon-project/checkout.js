@@ -3,12 +3,11 @@ import {
   removeFromCart,
   calculateCartQuantity,
   updateQuantity
-} from '../data/cart.js';
-import {products} from '../data/products.js';
-import {formatCurrency} from './utils/money.js';
+} from './data/cart.js';
+import {products} from './data/products.js';
+import {formatCurrency} from './scripts/utils/money.js';
 
 let cartSummaryHTML = '';
-
 cart.forEach((cartItem) => {
   const productId = cartItem.productId;
 
@@ -40,7 +39,7 @@ cart.forEach((cartItem) => {
           </div>
           <div class="product-quantity">
             <span>
-              Quantity: <span class="quantity-label">${cartItem.quantity}</span>
+              
               Quantity: <span class="quantity-label js-quantity-label-${matchingProduct.id}">${cartItem.quantity}</span>
             </span>
             <span class="update-quantity-link link-primary js-update-link"
@@ -105,10 +104,13 @@ cart.forEach((cartItem) => {
       </div>
     </div>
   `;
+
+
 });
 
 document.querySelector('.js-order-summary')
   .innerHTML = cartSummaryHTML;
+
 
 document.querySelectorAll('.js-delete-link')
   .forEach((link) => {
