@@ -1,4 +1,6 @@
-[
+
+
+export const planets =  [
     {
         "name": "Mercury",
         "type": "Terrestrial",

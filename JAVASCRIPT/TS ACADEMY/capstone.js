@@ -1,15 +1,5 @@
 
-const planets = [{
-    name: "Earth",
-    mass: 0.330
-}, {
-    name: "Mars",
-    mass: 0.330
-}, {
-    name: "Venus",
-    mass: 0.330
-}
-]
+import { planets } from "./api";
 
 /*let planetSummaryHTML = "";
 planets.forEach((planet) => {
@@ -37,8 +27,37 @@ function showOutput() {
         }
         if (matchingPlanet) {
             container.innerHTML = `
+            <div class = "first-card-design">
+            <img src= "${planet.image}">
           <p>${planet.name}</p>
+          <p>Type:${planet.type}</p>
+          </div>
+          <div class="second-card-dresign">
+          <p>Gravity:${planet.gravity}</p>
           <p>Mass:${planet.mass}</p>
+          <p>Period:${planet.period}</p>
+          </div>
+          <div class="third-card-design">
+          <div>
+          <img src = "TemperatureIcon.svg">
+          <p>${planet.temperature}</p>
+          </div>
+          <div>
+          <img src="Halfmoon.svg">
+          <p>${planet.moons}</p>
+          </div>
+          <div>
+          <img src = "Diameter.svg">
+          <p>${planet.diameter}</p>
+          </div>
+          <div>
+          <Img src = "Diameter.svg">
+          <p>${planet.distanceFromSun}</p>
+          </div>
+         </div>
+          
+          
+          <p>
          `;
         } else {
             console.log("Not found");
