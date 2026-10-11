@@ -1,1 +1,208 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+        /* Theme colours */
+:root {
+   --page-bg: #F6F8FF;
+  --heading-color: #173b80;
+  --header-bg: #164BAF;
+  --header-text: #ffffff;
+  --category-bg: #D1E3FF;
+  --category-text: #172b50;
+  --data-bg:  #F2F7FF;
+  --data-text: #222222; 
+   --border-color: #FFFFFF;
+}
+
+/* Dark theme */
+html[data-theme="dark"] {
+  --page-bg: #101b35;
+  --heading-color: #ffffff;
+  --header-bg: #14294f;
+  --header-text: #ffffff;
+  --category-bg: #4675c8;
+  --category-text: #ffffff;
+  --data-bg: #e5e6eb;
+  --data-text: #172b56;
+  --border-color: #b6c9e6;
+}
+
+/* Page appearance */
+body {
+  background-color: var(--page-bg);
+  color: var(--heading-color);
+  font-family: Arial, sans-serif;
+}
+
+/* Planet facts table */
+.planet-table {
+  /* max-width: 500px; */
+  width: 70%;
+  
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid var(--border-color);
+  border-radius: 18px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 730px;
+  font-size: 0.8rem;
+}
+
+/* Table headings */
+.planet-table th {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 14px 10px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+/* Planet data cells */
+.planet-table td {
+  background-color: var(--data-bg);
+  color: var(--data-text);
+  padding: 14px 10px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+/* Grouped planet categories */
+.planet-table .category-cell {
+  background-color: var(--category-bg);
+  color: var(--category-text);
+  font-weight: bold;
+
+}
+.table-caption {
+    color: var(--heading-color);
+  caption-side: top;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  }
+  
+  /* TABLET BREAKPOINT */
+/* Applies to screens 1023px wide OR SMALLER (Tablets and Mobile) */
+@media screen and (max-width: 1024px) {
+ .planet-table {
+    width: 100%;
+    overflow-x: auto;
+ max-width: 1024px;
+ }
+}
+/* MOBILE BREAKPOINT */
+/* Applies to screens 767px wide OR SMALLER (Phones only) */
+@media screen and (max-width: 767px) {
+ .planet-table {
+    width: 100%;
+    overflow-x: auto;
+    max-width: 320px;
+ }
+ .planet-table th, 
+ .planet-table td {
+    padding: 8px;
+    font-size: 12px;
+    .mass {
+      display: none;
+    }
+ }
+}
+
+
+@media (max-width : 767px) {
+   .mass {
+    display: none;
+   }
+}
+    </style>
+</head>
+
+<body>
+
+
+        <div class="table-container">  
+            <h2 class="table-caption">Data about the planets of our solar system (Planetary facts taken from NASA)</h2>
+              <table class="planet-table">  
+
+    <th scope="col" colspan="2"></th>  
+    <th scope="col">Name</th>  
+    <th scope="col" class="mass">Mass ( 10kg 24)</th>  
+    <th scope="col">Diameter (km)</th>  
+     
+
+    <tr>  
+        <td class="category-cell" rowspan="4" colspan="2">Terrestial Planets</td>  
+        <td>Mercury</td>  
+        <td class="mass">0.000174</td>  
+        <td>4879</td>  
+         
+    </tr>  
+    <tr>  
+        <td>Venus</td>  
+        <td class="mass">0.00256</td>  
+        <td>12104</td>  
+          
+    </tr>  
+    <tr>  
+        <td>Earth</td>  
+        <td class="mass">0.00315</td>  
+        <td>12796</td>  
+          
+    </tr>  
+    <tr>  
+        <td>Mars</td>  
+        <td class="mass">0.0338</td>  
+        <td>6792</td>  
+          
+    </tr>  
+    <tr>  
+        <td class="category-cell" rowspan="4">Jovian Planets</td>  
+        <td class="category-cell" rowspan="2">Gas Giants</td>  
+        <td>Jupiter</td>  
+        <td class="mass">1.0</td>  
+        <td>142984</td>  
+         
+    </tr>  
+    <tr>  
+
+        <td>Saturn</td>  
+        <td class="mass">0.299</td>  
+        <td>120536</td>  
+          
+    </tr>  
+    <tr>  
+        <td class="category-cell" rowspan="2">Ice Giants</td>  
+        <td>Uranus</td>  
+        <td class="mass">0.0457</td>  
+        <td>51118</td>  
+         
+    </tr>  
+    <tr>  
+        <td>Neptune</td>  
+        <td class="mass">0.0539</td>  
+        <td>49528</td>  
+          
+    </tr>  
+    <tr>  
+        <td class="category-cell"colspan="2">Dwarf Planet</td>  
+        <td>Pluto</td>  
+        <td class="mass"> 0.0000069</td>  
+        <td>2376</td>  
+    </tr>  
+</table>  
+</div>
+    </section>
+</body>
+
+</html>

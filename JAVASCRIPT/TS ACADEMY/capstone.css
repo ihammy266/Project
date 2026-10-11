@@ -1,0 +1,76 @@
+.is-editing-page .container {
+    display: initial;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 80vh;
+    width: 100%;
+    background-color: papayawhip;
+}
+
+#input {
+    width: 700px;
+    height: 40px;
+    background-color: rgb(255, 254, 254);
+    border: none;
+    box-shadow: 4px 3px 4px 4px rgb(0, 0, 0, 0.05);
+    border-radius: 250px;
+}
+
+#search-button {
+    border: none;
+    padding: 1px 8px 10px 8px;
+    margin-left: -40px;
+    border-top-right-radius: 10px;
+}
+img {
+    margin-top: 3px;
+    text-align: center;
+}
+.planet-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    border: 1px solid black;
+    margin-top: 60px;
+    width: 400px;
+    height: 250px;
+    background-color: salmon;
+}
+
+.search-area {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 70px;
+    margin-top: 40px;
+}
+
+
+
+@media (max-width : 480px) {
+    .planet-info {
+        width: 280px;
+    }
+}
+
+@media(max-width : 320px) {
+    .planet-info {
+        width: 200px;
+        height: 200px;
+    }
+      #input {
+        display: none;
+    }
+}
+
+@media (max-wdih : 320px) {
+  
+}
