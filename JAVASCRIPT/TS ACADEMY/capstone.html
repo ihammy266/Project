@@ -1,27 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Poiret+One&family=Roboto:ital,wght@0,500;1,500&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
   <title>Capstone Project</title>
   <link rel="stylesheet" href="capstone.css">
 </head>
+
 <body>
-   <header></header>
-   <main></main>
-   <footer></footer>
-  
-       <div class="search-area">
-     <input id="input" type="text" placeholder="search planet">
-   <button id="search-button"><img src="SearchIcon.svg"></button>
-  </div>
-   <div class="container">
-    <div class="planet-info">
-      <p>Earth</p>
-      <p>Mass:0.330</p>
+  <header></header>
+  <main></main>
+  <footer></footer>
+
+  <div class="container">
+    <div class="search-container">
+      <div class="search-area">
+        <img src="SearchIcon.svg" class="search-icon">
+        <input id="input" type="text" placeholder="Search planet name..">
+        <p class="no-results js-no-results">No results</p>
+        <button id="search-button">Search</button>
+      </div>
     </div>
-   </div>
-   <p class="demo"></p>
-   <script type="module"  src="capstone.js"></script>
+    <div class="planet-info">
+      <div class="first-card-design">
+        <div class="image-container">
+          <img class="planet-image" src="https://anurella.github.io/images/planets/earth.jpg">
+        </div>
+        <div class="card-description">
+          <h3 class="planet-name">Earth</h3>
+          <p class="type">Terrestrial</p>
+          <p class="name-description"> "The only planet known to support life, with liquid water on its surface."</p>
+        </div>
+      </div>
+
+
+
+      <div class="second-card-design-container">
+        <div class="second-card-design">
+          <div>
+            <p class="name">Gravity</p>
+            <p class="gravity">9.8</p>
+          </div>
+          <div>
+            <p class="name">Mass</p>
+            <p class="mass-no">0.00315</p>
+          </div>
+          <div>
+            <p class="name">Period</p>
+            <p class="period">365</p>
+          </div>
+        </div>
+      </div>
+      <div class="third-card-design-container">
+        <div class="third-card-design">
+          <div class="temp-moon">
+            <div class="temp temp-div">
+              <img class="temp-image" src="TemperatureIcon.svg">
+              <p>288</p>
+            </div>
+
+            <div class="temp  moon-div">
+              <img class="moon-image" src="Halfmoon.svg">
+              <p>1</p>
+            </div>
+          </div>
+
+          <div class="diam-star">
+            <div class="temp  diam-div">
+              <img class="diameter-image" src="Diameter.svg">
+              <p>12756</p>
+            </div>
+            <div class="temp  star-div">
+              <Img class="star-image" src="CompanyIcon.svg">
+              <p>149.6</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <section>
+        <h2>Planetary Facts at a Glance</h2>
+        <p>Below is a comparative table of major planets in our solar system. The data highlights key
+            physical properties used by astronomers and researchers worldwide.</p>
+      <div class="table-container">
+        <h2 class="table-caption">Data about the planets of our solar system (Planetary facts taken from NASA)</h2>
+        <table class="planet-table">
+
+          <th scope="col" colspan="2"></th>
+          <th scope="col">Name</th>
+          <th scope="col" class="mass">Mass ( 10kg 24)</th>
+          <th scope="col">Diameter (km)</th>
+
+
+          <tr>
+            <td class="category-cell" rowspan="4" colspan="2">Terrestial Planets</td>
+            <td>Mercury</td>
+            <td class="mass">0.000174</td>
+            <td>4879</td>
+
+          </tr>
+          <tr>
+            <td>Venus</td>
+            <td class="mass">0.00256</td>
+            <td>12104</td>
+
+          </tr>
+          <tr>
+            <td>Earth</td>
+            <td class="mass">0.00315</td>
+            <td>12796</td>
+
+          </tr>
+          <tr>
+            <td>Mars</td>
+            <td class="mass">0.0338</td>
+            <td>6792</td>
+
+          </tr>
+          <tr>
+            <td class="category-cell" rowspan="4">Jovian Planets</td>
+            <td class="category-cell" rowspan="2">Gas Giants</td>
+            <td>Jupiter</td>
+            <td class="mass">1.0</td>
+            <td>142984</td>
+
+          </tr>
+          <tr>
+
+            <td>Saturn</td>
+            <td class="mass">0.299</td>
+            <td>120536</td>
+
+          </tr>
+          <tr>
+            <td class="category-cell" rowspan="2">Ice Giants</td>
+            <td>Uranus</td>
+            <td class="mass">0.0457</td>
+            <td>51118</td>
+
+          </tr>
+          <tr>
+            <td>Neptune</td>
+            <td class="mass">0.0539</td>
+            <td>49528</td>
+
+          </tr>
+          <tr>
+            <td class="category-cell" colspan="2">Dwarf Planet</td>
+            <td>Pluto</td>
+            <td class="mass"> 0.0000069</td>
+            <td>2376</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </div>
+
+
+  <p class="demo"></p>
+  <script type="module" src="capstone.js"></script>
 </body>
+
 </html>

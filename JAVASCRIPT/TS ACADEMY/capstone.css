@@ -1,3 +1,31 @@
+.space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.space-mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.space-mono-regular-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.space-mono-bold-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+}
+
+body {
+    font-family: "Space Mono", monospace;
+}
+
 .is-editing-page .container {
     display: initial;
 }
@@ -7,42 +35,71 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
-    height: 80vh;
+    background-color: #F6F8FF;
+    height: 150vh;
     width: 100%;
-    background-color: papayawhip;
+    z-index: 100;
+
 }
 
 #input {
-    width: 700px;
-    height: 40px;
+    width: 580px;
+    height: 60px;
     background-color: rgb(255, 254, 254);
     border: none;
-    box-shadow: 4px 3px 4px 4px rgb(0, 0, 0, 0.05);
-    border-radius: 250px;
+    box-shadow: 4px 4px 4px 4px rgb(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding-left: 60px;
+
+}
+
+#input:hover {
+    border-color: blueviolet;
+
 }
 
 #search-button {
-    border: none;
-    padding: 1px 8px 10px 8px;
-    margin-left: -40px;
-    border-top-right-radius: 10px;
+    width: 90px;
+    height: 50px;
+    margin-top: 8px;
+    border: 1px solid white;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    margin-left: -15px;
 }
-img {
-    margin-top: 3px;
-    text-align: center;
+
+.no-results {
+    margin-left: -220px;
+    margin-right: 40px;
+    text-align: bottom;
+    color: red;
+    opacity: 0;
 }
+
+#search-button:hover {
+    border-color: blueviolet;
+}
+
 .planet-info {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     margin: auto;
-    border: 1px solid black;
     margin-top: 60px;
-    width: 400px;
-    height: 250px;
-    background-color: salmon;
+    width: 650px;
+    height: fit-content;
+    z-index: 0;
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 150px;
+    box-shadow: 4px 3px 4px 4px rgb(0, 0, 0, 0.05);
+}
+
+img {
+    margin-top: 3px;
+    text-align: center;
 }
 
 .search-area {
@@ -51,26 +108,432 @@ img {
     margin: auto;
     margin-bottom: 70px;
     margin-top: 40px;
+    position: absolute;
+    z-index: 400;
+
+}
+
+.search-icon {
+    position: relative;
+    left: 20px;
+    top: 19px;
+    margin-right: -30px;
+    border: none;
+    text-align: center;
+    height: 20px;
+
+
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    position: fixed;
+
+}
+
+.first-card-design {
+
+    display: grid;
+    grid-template-columns: 150px 80px;
+    vertical-align: top;
+    justify-content: start;
+    margin-top: 30px;
+    margin-left: 0%;
+    text-align: start;
+    width: 80%;
+    height: 40%;
+}
+
+.planet-image {
+    height: 9cap;
+    width: 9cap;
+    border-radius: 5cap;
+}
+
+.name-description {
+    margin-top: 20px;
+    width: 350px;
+    color: rgb(196, 190, 190);
+    font-size: 15px;
+}
+
+.name,
+.type {
+
+    font-weight: 600;
+
+}
+
+.card-description {
+    width: 100%;
+    text-align: start;
+    margin-left: -20px;
+
+}
+
+.type {
+    color: rgb(93, 206, 168);
+    font-size: 14px;
+    margin-top: -15px;
+}
+
+.second-card-design {
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    gap: 70px;
+    align-items: center;
+    justify-content: start;
+    width: 92%;
+    height: 80px;
+    background-color: rgb(241, 240, 240);
+    padding-left: 10px;
+    padding-right: 15px;
+    margin-right: -80px;
+}
+
+.mass-no,
+.period,
+.gravity {
+    font-weight: 600;
+
+}
+
+.name {
+    font-size: small;
+    color: rgb(208, 205, 205);
+}
+
+.third-card-design {
+
+    width: 70%;
+    height: 150px;
+    margin-top: 20px;
+    margin-left: -50px;
+     border: 1px solid rgb(149, 28, 28);
+}
+.third-card-design-container{
+   border: 1px solid rgb(149, 28, 28);
+    width: 75%;
+}
+.temp-image,
+.moon-image,
+.star-image,
+.diameter-image {
+    height: 18px;
+}
+
+.third-card-design p {
+    color: rgb(141, 137, 137);
+    font-size: 14px;
+    margin-left: 8px;
+   
+}
+
+.temp-moon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 100px;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.diam-star {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.temp {
+    display: flex;
+    align-items: center;
+    margin-bottom: -10px;
+
+}
+
+.star-div {
+    margin-right: -35px;
+}
+
+.diam-div {
+    margin-left: -3.5px;
 }
 
 
+  .second-card-design-container {
+    display: flex;
+    
+    width: 50%;
+    height: fit-content;
+   }
 
-@media (max-width : 480px) {
+   
+
+
+
+@media (max-width : 767px) {
+    #input {
+        width: 350px;
+        height: 50px;
+        margin-right: 10px;
+        border-radius: 10px;
+    }
+
+    #search-button {
+        width: 70px;
+        height: 40px;
+        margin-left: -0px;
+        margin-right: -10px;
+    }
+
+    .search-icon {
+        top: 14px;
+    }
+
     .planet-info {
-        width: 280px;
+        width: 460px;
+        height: 900px;
+    }
+
+    .name-description {
+        width: 400px;
+        margin-left: -15cap;
+        margin-top: 50px;
+
+    }
+
+    .second-card-design {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0px;
+        width: 90%;
+        height: 240px;
+        margin-top: -120px;
+        
+    }
+
+    .name {
+        margin-top: 3px;
+        margin-left: -10px;
+    }
+
+    .third-card-design {
+
+        width: 30%;
+        height: 150px;
+        margin-top: 20px;
+        margin-right: -130px;
+        border: 1px solid rgb(176, 52, 52);
+    }
+   .second-card-design-container {
+    display: flex;
+    align-self: start;
+    justify-self: start;
+    margin-left: 20px;
+   }
+   .third-card-design-container {
+    display: flex;
+    align-self: start;
+    justify-self: start;
+    margin-left: 20px;
+    border: 1px solid rgb(89, 24, 24);
+   }
+    .mass-no,
+    .gravity,
+    .period {
+        margin-left: -10px;
+    }
+
+    .temp-moon {
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+    .diam-star {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    .temp-div {
+
+        margin-bottom: -110px;
+        padding: 0;
+    }
+
+    .moon-div {
+        margin-bottom: 50px;
+        padding: 0;
+    }
+
+    .diam-div {
+
+        margin-top: -60px;
+        padding: 0;
+
+    }
+
+    .star-div {
+        margin-top: -80px;
     }
 }
 
-@media(max-width : 320px) {
-    .planet-info {
-        width: 200px;
-        height: 200px;
+@media(max-width : 480px) {
+      .planet-info {
+        width: 300px;
+        height: 900px;
     }
-      #input {
+     .name-description {
+        width: 300px;
+        margin-left: -15cap;
+        margin-top: 50px;
+    }
+}
+
+@media (max-wdih : 320px) {}
+
+table {
+    margin-top: -8px;
+    margin-bottom: 20px;
+}
+/* Theme colours */
+:root {
+    --page-bg: #F6F8FF;
+    --heading-color: #173b80;
+    --header-bg: #164BAF;
+    --header-text: #ffffff;
+    --category-bg: #D1E3FF;
+    --category-text: #172b50;
+    --data-bg: #F2F7FF;
+    --data-text: #222222;
+    --border-color: #FFFFFF;
+}
+
+/* Dark theme */
+html[data-theme="dark"] {
+    --page-bg: #101b35;
+    --heading-color: #ffffff;
+    --header-bg: #14294f;
+    --header-text: #ffffff;
+    --category-bg: #4675c8;
+    --category-text: #ffffff;
+    --data-bg: #e5e6eb;
+    --data-text: #172b56;
+    --border-color: #b6c9e6;
+}
+
+/* Page appearance
+body {
+  background-color: var(--page-bg);
+  color: var(--heading-color);
+  font-family: Arial, sans-serif;
+}
+ */
+
+
+
+/* Planet facts table */
+.planet-table {
+    /* max-width: 500px; */
+    width: 70%;
+
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px solid var(--border-color);
+    border-radius: 18px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 730px;
+    font-size: 0.8rem;
+}
+
+/* Table headings */
+.planet-table th {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 14px 10px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+/* Planet data cells */
+.planet-table td {
+    background-color: var(--data-bg);
+    color: var(--data-text);
+    padding: 14px 10px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+/* Grouped planet categories */
+.planet-table .category-cell {
+    background-color: var(--category-bg);
+    color: var(--category-text);
+    font-weight: bold;
+
+}
+
+.table-caption {
+    color: var(--heading-color);
+    caption-side: top;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* TABLET BREAKPOINT */
+/* Applies to screens 1023px wide OR SMALLER (Tablets and Mobile) */
+@media screen and (max-width: 1024px) {
+    .planet-table {
+        width: 100%;
+        overflow-x: auto;
+        max-width: 1024px;
+    }
+}
+
+/* MOBILE BREAKPOINT */
+/* Applies to screens 767px wide OR SMALLER (Phones only) */
+@media screen and (max-width: 767px) {
+    .planet-table {
+        width: 100%;
+        overflow-x: auto;
+        max-width: 320px;
+    }
+
+    .planet-table th,
+    .planet-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+         .mass {
+            display: none;
+        }
+}
+
+
+@media (max-width : 767px) {
+    .mass {
         display: none;
     }
-}
-
-@media (max-wdih : 320px) {
-  
 }
